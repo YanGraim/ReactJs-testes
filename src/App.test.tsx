@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import App from "./App"
 
 
@@ -34,6 +34,7 @@ describe("First teste app component", () => {
 describe("App component", () => {
     it("should render app component", () => {
         render(<App />)
+        screen.getByText("Configurando testes")
     })
 })
 
