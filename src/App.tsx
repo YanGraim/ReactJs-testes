@@ -8,6 +8,7 @@ function App() {
     <div>
       <h1 className='titulo'>Configurando testes</h1>
       <p>{message}</p>
+      <h2>testando</h2>
 
       <button onClick={() => setMessage("fazendo testes")}>Alterar mensagem</button>
     </div>
