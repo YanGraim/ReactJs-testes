@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, fireEvent } from "@testing-library/react"
+import "@testing-library/jest-dom"
 import App from "./App"
 
 
@@ -35,6 +36,26 @@ describe("App component", () => {
     it("should render app component", () => {
         render(<App />)
         screen.getByText("Configurando testes")
+    })
+
+    it("should heading h1 have correct text", () => {
+        render(<App />)
+
+        const headingElement = screen.getByRole("heading", { level: 1 })
+        expect(headingElement).toHaveTextContent("Configurando testes")
+        expect(headingElement).toHaveClass("titulo")
+    })
+
+    it("should change message on button click", () => {
+        render(<App />)
+
+        const buttonElement = screen.getByText("Alterar mensagem")
+        fireEvent.click(buttonElement)
+
+        screen.getByText("fazendo testes")
+
+        const oldMessage = screen.queryByText("Bem vindo ao projeto")
+        expect(oldMessage).not.toBeInTheDocument()
     })
 })
 
