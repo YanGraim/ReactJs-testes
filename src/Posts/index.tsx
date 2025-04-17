@@ -12,7 +12,7 @@ export function Posts() {
     const [users, setUsers] = useState<UsersProps[]>([])
 
     async function handleGetUSers() {
-        const response = await axios.get("https://jsonplaceholder.typecode.com/users")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
         setUsers(response.data)
     }
 

@@ -16,11 +16,15 @@ export function Form() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>Digite seu nome</label>
-                <input type="text" placeholder="Digite seu nome" value={name} onChange={(e) => setName(e.target.value)} />
+                <div>
+                    <label>Digite seu nome</label>
+                    <input type="text" placeholder="Digite seu nome" value={name} onChange={(e) => setName(e.target.value)} />
+                </div>
 
-                <label>Digite seu email</label>
-                <input type="text" placeholder="Digite seu email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <div>
+                    <label>Digite seu email</label>
+                    <input type="text" placeholder="Digite seu email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
 
                 <button type="submit">Cadastrar</button>
             </form>

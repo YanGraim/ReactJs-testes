@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { User } from './User'
+import { Form } from './Form'
+import { Posts } from './Posts'
 
 function App() {
   const [message, setMessage] = useState("Bem vindo ao projeto")
@@ -17,6 +19,14 @@ function App() {
       <br />
 
       <User />
+      <hr />
+      <br />
+      <br />
+      <Form />
+      <hr />
+      <br />
+      <br />
+      <Posts />
     </div>
   )
 }
