@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Button } from './Button'
+import { User } from './User'
 
 function App() {
   const [message, setMessage] = useState("Bem vindo ao projeto")
@@ -15,9 +15,8 @@ function App() {
 
       <hr />
       <br />
-      <Button onClick={() => alert("clicou")} disabled={true}>
-        Clique aqui
-      </Button>
+
+      <User />
     </div>
   )
 }
